@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Bienvenido a Aregua Coffee</h1>
+
+<div class="row">
+    {% for cafe in cafe %}
+        <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{ cafe.imagen }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ cafe.nombre }}</h5>
+              <p class="card-text">{{ cafe.precio }}</p>
+              <a href="#" class="btn btn-primary">Agregar</a>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
